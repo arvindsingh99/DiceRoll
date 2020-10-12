@@ -1,0 +1,28 @@
+<style>
+.roll{
+    color:white;
+    background-color: Black;
+    border-radius:10%;
+    font-size:20px;
+    padding:20px 40px;
+    margin:100px 100px 100px 100px;
+    
+}
+</style>
+
+<a href="javascript:void(0)" class="roll" onClick="roll()">Roll</a>
+<br>
+<br>
+<br>
+<div id="result"></div>
+<script> 
+
+function roll() {
+    document.getElementById("result").innerHTML ="<img height='300px' src='image/loader.gif'/>";
+    setTimeout(function(){
+    var rand = Math.floor(Math.random()*6)+1;
+    document.getElementById("result").innerHTML ="<img src='image/"+ rand +".png'/>";
+}, 4000);
+}
+
+</script>
